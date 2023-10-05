@@ -4,8 +4,13 @@ Voordat we verder gaan: checken of er uberhaupt een $_GET is ingevuld
 if (empty($_GET['zoekveld'])){
    echo "Vul wat in, faka met jou.";
 }else{
-   echo strip_tags($_GET['zoekveld']);
+    $username = "root";
+    $password = "";
+
+    $conn = new PDO("");
+//    echo strip_tags($_GET['zoekveld']);
 }
+
 //Connectie naar de database
 
 //Zoekvraag versturen naar de database
