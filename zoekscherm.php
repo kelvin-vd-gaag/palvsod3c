@@ -10,8 +10,8 @@ if (empty($_GET['zoekveld'])){
     // echo strip_tags($_GET['zoekveld']);
 
     //TODO: Fix deze code zodat je met behulp van een wildcard (%) alle restaurants kan vinden met 'bere' in de naam
-    $select_restaurants = $conn->prepare("SELECT * FROM restaurants WHERE naam LIKE :zoekveld" . "%");
-    $select_restaurants->bindParam(":zoekveld", $_GET['zoekveld']);
+    $select_restaurants = $conn->prepare("SELECT * FROM restaurants WHERE naam");
+//    $select_restaurants->bindParam(":zoekveld", $_GET['zoekveld']);
     $select_restaurants->execute();
     $restaurants = $select_restaurants->fetchAll();
 
